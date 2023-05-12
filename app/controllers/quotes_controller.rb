@@ -31,6 +31,11 @@ class QuotesController < ApplicationController
     end
   end
 
+  def destroy
+    @quote.destroy
+    redirect_to quotes_path, notice: "Quote was successfully destroyed."
+  end
+
   private
 
   def set_quote
